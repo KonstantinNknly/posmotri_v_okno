@@ -16,6 +16,7 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
 }
 
 h1,
@@ -30,9 +31,294 @@ blockquote,
 fieldset {
   margin: 0;
   padding: 0;
+  border: none;
 }
 
 ul,
 ol {
   list-style: none;
 }
+/*------------ Контент------------ */                        
+.content {
+  display: flex; 
+  width: 1140px;
+  align-items: end;
+  gap: 30px;
+  margin: auto;
+}
+/*------------ Результат------------ */
+.result {
+  max-width: 100%;
+  max-height: 100%;
+}
+  /* Видео контейнер */
+.result__video-container {
+  position: relative;
+  margin-bottom: 12px;
+  min-width: 711px;
+  min-height: 386px;
+}
+
+.result__video {
+  width: 711px;
+  height: 386px;
+  object-fit: fill;
+}
+ /* Форма поиска */
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.search-form__fieldset {
+  max-height: 56px;
+  display: flex;
+  justify-items: start;
+  flex-direction: column;
+  row-gap: 5px;
+  line-height: 27px;
+}
+
+.search-form__textfield {
+  min-width: 225px;
+  appearance: none;
+  background-color: transparent;
+  font-family: 'FiraSansCondesed', sans-serif;
+  border-width: 1px 0px;
+  border-style: solid;
+  font-size: 16px;
+  line-height: 23px;
+  border-color: #fff;
+  font-weight: 400;
+  color: #fff;
+}
+
+.search-form__textfield:has(:focus-visible) {
+  outline: 1px #fff solid;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 15px;
+}
+
+.search-form__pseudo-checkbox {
+  display: flex;
+  justify-content: center;
+  inline-size: 19px;
+  block-size: 19px;
+  border: 1px #fff solid;
+  cursor: pointer;
+}
+
+input[type='checkbox']:checked + span {
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px #fff solid;
+  box-shadow: inset 0px 0px 0px 1px #1b1919;
+}
+
+.search-form__fieldset-title {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+}
+
+.search-form__label {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
+}
+
+.search-form__label:has(:not(:active):focus-visible) {
+  outline: 1px #fff solid ;
+  outline-offset: 2px;
+}
+
+.search-form__submit-button {
+  cursor: pointer;
+}
+/*Кнопки-общее*/
+.button {
+  height: 34px;
+  width: 194px;
+  cursor: pointer;
+  border: 1px #fff solid;
+  background-color: transparent;
+  font-family: 'FiraSansCondesed', sans-serif;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px #fff solid;
+  outline-offset: 1px;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+/*------------ Боковое меню со скролом------------ */
+.content__details {
+  display: flex;
+  flex-direction: column;
+  max-width: 420px;
+  gap: 26px;
+}
+/*Заголовок*/
+.title {
+  max-width: 259px;
+  height: 210px;
+  font-size: 75px;
+  text-transform: uppercase;
+  line-height: 94%;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+}
+
+.content__accent {
+  color: rgba(84, 80, 80, 1);
+}
+
+/*Карточки с вариантами видео общее*/
+.content__list {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 298px;
+  overflow: auto;
+}
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+/*Карточки*/
+.content__card-link {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  margin: 2px
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px #fff solid;
+}
+
+.content__card-link_current:active {
+  outline: 1px #fff solid;
+}
+
+/*Видео карточки*/
+.content__video-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 394px;
+  height: 103px;
+}
+
+.content__video-card-description-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
+  justify-content: center;
+  line-height: 31px;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px; 
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.content__video-card-title {
+  max-width: 200px;
+  max-height: 101px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 6px;
+}
+
+/* Текст в карточках бокового меню */
+.content__video-card-description {
+  font-family: 'FiraSansCondesed', sans-serif;
+  font-size: 18px;
+  line-height: 16.2px;
+  inline-size: 200px;
+}
+
+.more-button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+/*THE END*/
+/*BEMissimo 🤌 (Everything "should be" good)*/
+
+
+
+
+
+
+
+
+
+
+
+
+
