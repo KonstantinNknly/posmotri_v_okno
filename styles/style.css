@@ -83,7 +83,7 @@ ol {
   min-width: 225px;
   appearance: none;
   background-color: transparent;
-  font-family: 'FiraSansCondensed', sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   border-width: 1px;
   border-style: solid;
   font-size: 16px;
@@ -137,6 +137,10 @@ input[type='checkbox']:checked + span {
   align-items: center;
 }
 
+.search-form__label-text {
+  cursor: pointer;
+}
+
 .search-form__label:hover .search-form__label-text {
   text-decoration: underline;
 }
@@ -156,7 +160,7 @@ input[type='checkbox']:checked + span {
   cursor: pointer;
   border: 1px #fff solid;
   background-color: transparent;
-  font-family: 'FiraSansCondensed', sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   color: #fff;
   display: flex;
   align-items: center;
@@ -240,6 +244,10 @@ input[type='checkbox']:checked + span {
   outline: 1px #fff solid;
 }
 
+.content__card-link_current {
+  background-color: #545050;
+}
+
 .content__card-link_current:active {
   outline: 1px #fff solid;
 }
@@ -284,7 +292,7 @@ input[type='checkbox']:checked + span {
 
 /* Текст в карточках бокового меню */
 .content__video-card-description {
-  font-family: 'FiraSansCondensed', sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   line-height: 16.2px;
   inline-size: 200px;
