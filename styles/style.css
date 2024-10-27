@@ -99,6 +99,7 @@ ol {
 
 .search-form__textfield:focus {
   outline: none;
+  border-width: 1px 0px;
 }
 
 .search-form__checkbox-list {
